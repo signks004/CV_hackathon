@@ -1,0 +1,15 @@
+{% extends "layout.html" %} 
+{% block body %}
+<div id='container'>
+    <h1>DEMO</h1>
+    <img id='video_feed' src="{{ url_for('video_feed') }}">
+    <div id='controls'>
+        <button id='start_btn' class='mdl-button mdl-button--raised mdl-button--colored' type="submit" class="md-btn md-btn-raised" onclick="stream()">START</button>
+        <button disabled="disabled" id='stop_btn' class="mdl-button mdl-button--raised mdl-button--accent" type="submit" onclick="stop()">STOP</button>
+        <button id='restart_btn' type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="restart_cam()">RESTART CAM</button>
+    </div>
+    <p id='status'></p>
+    
+  </div>
+  
+{%endblock%}
